@@ -1,0 +1,12 @@
+{%extends 'main.html' %}
+{% block content %}
+
+<div>
+    <form method="POST" action="">
+        {%csrf_token%}
+        <h4>are you sure you want to delete "{{obj}}?</h4>
+        <a href="{{request.MERA.HTTP.REFERER}}">go back</a>
+        <input type="submit" value="confirm" />
+    </form>
+</div>
+{% endblock content %}
